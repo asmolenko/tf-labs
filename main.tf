@@ -2,7 +2,7 @@ resource "google_compute_instance" "demo" {
   count        = var.number_of_demo_instances
   name         = "web-instance-${count.index}"
   machine_type = "e2-small"
-  zone         = "us-west1-a"
+  zone         = "us-west2-a"
   metadata = {
    ssh-keys = "ubuntu:${file("/bitnami/jenkins/home/tf-key.pub")}"
 }
